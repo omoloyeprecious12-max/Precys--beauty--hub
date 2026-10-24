@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Precy's Beauty Hub | Handmade Press-On Nails</title>
+<meta name="description" content="Handmade, reusable press-on nails in Nigeria. Luxury nails, delivered to your door.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fbf6ee;
+    --cream-2:#f4ecdf;
+    --lilac:#d9c7ee;
+    --lavender:#b79ddb;
+    --deep:#6f4fa3;
+    --ink:#3a2c4f;
+    --muted:#7b6d8e;
+    --white:#ffffff;
+    --whatsapp:#25d366;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--ink);line-height:1.65;font-weight:300}
+  h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:600;line-height:1.15}
+  a{text-decoration:none;color:inherit}
+  .wrap{max-width:1050px;margin:0 auto;padding:0 20px}
+  section{padding:70px 0}
+  .eyebrow{letter-spacing:.25em;text-transform:uppercase;font-size:.75rem;color:var(--deep);font-weight:500;margin-bottom:10px;display:block}
+  h2{font-size:2.3rem;margin-bottom:14px}
+  .center{text-align:center}
+  .lead{max-width:560px;margin:0 auto 40px;color:var(--muted)}
+
+  /* Buttons */
+  .btn{display:inline-block;padding:13px 28px;border-radius:50px;font-family:'Jost',sans-serif;font-weight:500;font-size:.95rem;border:none;cursor:pointer;transition:.25s}
+  .btn-primary{background:var(--deep);color:#fff}
+  .btn-primary:hover{background:#5a3d8a;transform:translateY(-2px)}
+  .btn-outline{border:1.5px solid var(--deep);color:var(--deep);background:transparent}
+  .btn-outline:hover{background:var(--deep);color:#fff}
+  .btn-wa{background:var(--whatsapp);color:#fff}
+  .btn-wa:hover{filter:brightness(.93);transform:translateY(-2px)}
+
+  /* Header */
+  header{position:sticky;top:0;z-index:50;background:rgba(251,246,238,.93);backdrop-filter:blur(8px);border-bottom:1px solid var(--lilac)}
+  .nav{display:flex;justify-content:space-between;align-items:center;padding:14px 20px;max-width:1050px;margin:0 auto;flex-wrap:wrap;gap:8px}
+  .logo{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:700;color:var(--deep)}
+  .nav ul{list-style:none;display:flex;gap:22px}
+  .nav ul a{font-size:.9rem;color:var(--ink)}
+  .nav ul a:hover{color:var(--deep)}
+
+  /* Hero */
+  .hero{background:linear-gradient(160deg,var(--cream) 0%,#efe4fa 55%,var(--lilac) 100%);text-align:center;padding:90px 0 100px}
+  .hero h1{font-size:3.2rem;max-width:700px;margin:0 auto 18px;color:var(--ink)}
+  .hero h1 em{color:var(--deep);font-style:italic}
+  .hero p{max-width:520px;margin:0 auto 30px;color:var(--muted);font-size:1.1rem}
+  .hero .btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+
+  /* About */
+  .about{background:var(--white)}
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+  .about-card{background:linear-gradient(145deg,var(--lilac),var(--cream-2));border-radius:24px;padding:40px 30px;text-align:center}
+  .about-card h3{font-size:1.7rem;color:var(--deep);margin-bottom:10px}
+  .perks{list-style:none;margin-top:18px}
+  .perks li{padding:6px 0;color:var(--muted)}
+  .perks li::before{content:"✦";color:var(--lavender);margin-right:10px}
+
+  /* Products */
+  .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+  .card{background:var(--white);border-radius:20px;overflow:hidden;box-shadow:0 8px 24px rgba(111,79,163,.10);display:flex;flex-direction:column;transition:.25s}
+  .card:hover{transform:translateY(-5px)}
+  .card .img{aspect-ratio:1/1;background:#efe4fa;overflow:hidden}
+  .card .img img{width:100%;height:100%;object-fit:cover;display:block}
+  .card .body{padding:18px;display:flex;flex-direction:column;flex:1}
+  .card h3{font-size:1.3rem;margin-bottom:4px}
+  .card .price{color:var(--deep);font-weight:500;margin-bottom:8px}
+  .card p{font-size:.88rem;color:var(--muted);margin-bottom:16px;flex:1}
+  .card .btn{width:100%;text-align:center;padding:11px}
+
+  /* Steps */
+  .steps{background:var(--cream-2)}
+  .steps-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+  .step{text-align:center;padding:10px}
+  .num{width:54px;height:54px;border-radius:50%;background:var(--lilac);color:var(--deep);font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:700;display:flex;align-items:center;justify-content:center;margin:0 auto 14px}
+  .step h3{font-size:1.25rem;margin-bottom:6px}
+  .step p{font-size:.9rem;color:var(--muted)}
+
+  /* Contact */
+  .contact{background:linear-gradient(160deg,var(--lilac),#efe4fa);text-align:center}
+  .contact p{margin-bottom:8px;color:var(--ink)}
+  .contact .btn{margin:22px 0 10px}
+
+  footer{background:var(--ink);color:#d8cce8;text-align:center;padding:26px 20px;font-size:.85rem}
+
+  /* Floating WhatsApp */
+  .float-wa{position:fixed;right:16px;bottom:16px;z-index:60;width:58px;height:58px;border-radius:50%;background:var(--whatsapp);display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(0,0,0,.25)}
+  .float-wa svg{width:30px;height:30px;fill:#fff}
+
+  /* Mobile */
+  @media(max-width:900px){
+    .grid{grid-template-columns:repeat(2,1fr)}
+    .steps-grid{grid-template-columns:repeat(2,1fr)}
+  }
+  @media(max-width:640px){
+    section{padding:52px 0}
+    .hero{padding:60px 0 70px}
+    .hero h1{font-size:2.3rem}
+    h2{font-size:1.9rem}
+    .about-grid{grid-template-columns:1fr}
+    .nav{justify-content:center}
+    .nav ul{gap:16px}
+    .card .body{padding:14px}
+    .card h3{font-size:1.1rem}
+  }
+  @media(max-width:400px){
+    .grid{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a href="#home" class="logo">Precy's Beauty Hub</a>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#products">Shop</a></li>
+      <li><a href="#how">How to Order</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="wrap">
+    <span class="eyebrow">Handmade · Reusable · Luxury</span>
+    <h1>Salon-perfect nails, <em>without the salon</em></h1>
+    <p>Beautiful handmade press-on nails you can wear again and again. Pick your set, press, and glow.</p>
+    <div class="btns">
+      <a href="#products" class="btn btn-primary">Shop Collection</a>
+      <a href="#" class="btn btn-wa wa-link" data-msg="Hello Precy's Beauty Hub! I'd like to place an order.">Order on WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="wrap about-grid">
+    <div>
+      <span class="eyebrow">Our Story</span>
+      <h2>Crafted by hand, made for you</h2>
+      <p style="color:var(--muted)">Precy's Beauty Hub creates press-on nails that feel luxurious and look flawless. Every set is shaped, painted and finished by hand, so you get elegant nails in minutes, with no damage and no long salon waits.</p>
+      <ul class="perks">
+        <li>Handmade with care</li>
+        <li>Reusable up to several wears</li>
+        <li>Gentle on your natural nails</li>
+        <li>Delivered across Nigeria</li>
+      </ul>
+    </div>
+    <div class="about-card">
+      <h3>Your nails, your style</h3>
+      <p style="color:var(--muted)">Can't find your size or design? Message us for a custom set made just for you.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section id="products">
+  <div class="wrap center">
+    <span class="eyebrow">The Collection</span>
+    <h2>Our Best-Selling Sets</h2>
+    <p class="lead">Each set comes with 10 nails in your size, adhesive tabs, a mini file and a prep pad.</p>
+
+    <div class="grid" style="text-align:left">
+
+      <!-- Product 1 -->
+      <div class="card">
+        <div class="img">
+          <img src="burgundy-bow.jpg" alt="Burgundy Bow press-on nails" loading="lazy">
+        </div>
+        <div class="body">
+          <h3>Burgundy Bow</h3>
+          <div class="price">₦12,000</div>
+          <p>Deep burgundy French tips with dainty bows, polka dots and a tiny gold stud. Sweet, romantic and eye-catching.</p>
+          <a href="#" class="btn btn-primary wa-link" data-msg="Hello! I'd like to order the Burgundy Bow press-on nails (₦12,000).">Buy Now</a>
+        </div>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="card">
+        <div class="img">
+          <img src="lemon-bloom.jpg" alt="Lemon Bloom press-on nails" loading="lazy">
+        </div>
+        <div class="body">
+          <h3>Lemon Bloom</h3>
+          <div class="price">₦14,500</div>
+          <p>Soft lemon-yellow with playful dots and delicate 3D flowers. Fresh, cheerful and full of personality.</p>
+          <a href="#" class="btn btn-primary wa-link" data-msg="Hello! I'd like to order the Lemon Bloom press-on nails (₦14,500).">Buy Now</a>
+        </div>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="card">
+        <div class="img">
+          <img src="golden-pearl.jpg" alt="Golden Pearl press-on nails" loading="lazy">
+        </div>
+        <div class="body">
+          <h3>Golden Pearl</h3>
+          <div class="price">₦16,000</div>
+          <p>Peachy nude with soft cream French tips, gold charms and pearls. Elegant, polished and made for special days.</p>
+          <a href="#" class="btn btn-primary wa-link" data-msg="Hello! I'd like to order the Golden Pearl press-on nails (₦16,000).">Buy Now</a>
+        </div>
+      </div>
+
+      <!-- Product 4 -->
+      <div class="card">
+        <div class="img">
+          <img src="fuchsia-glam.jpg" alt="Fuchsia Glam press-on nails" loading="lazy">
+        </div>
+        <div class="body">
+          <h3>Fuchsia Glam</h3>
+          <div class="price">₦13,500</div>
+          <p>Hot pink glitter French tips outlined in shimmering gold. Bold, glamorous and made to turn heads.</p>
+          <a href="#" class="btn btn-primary wa-link" data-msg="Hello! I'd like to order the Fuchsia Glam press-on nails (₦13,500).">Buy Now</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- HOW TO ORDER -->
+<section class="steps" id="how">
+  <div class="wrap center">
+    <span class="eyebrow">Simple &amp; Easy</span>
+    <h2>How to Order</h2>
+    <p class="lead">Ordering takes just a few minutes on WhatsApp.</p>
+    <div class="steps-grid">
+      <div class="step"><div class="num">1</div><h3>Choose a design</h3><p>Pick your favourite set from the collection above.</p></div>
+      <div class="step"><div class="num">2</div><h3>Tap Buy Now</h3><p>This opens WhatsApp with your order message ready to send.</p></div>
+      <div class="step"><div class="num">3</div><h3>Share your size</h3><p>Tell us your nail size and delivery address. We'll confirm the total.</p></div>
+      <div class="step"><div class="num">4</div><h3>Pay &amp; receive</h3><p>Make payment and get your set delivered to your door.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <span class="eyebrow">Get in Touch</span>
+    <h2>Let's make your nails beautiful</h2>
+    <p>Questions, custom orders or bulk requests? Send us a message.</p>
+    <a href="#" class="btn btn-wa wa-link" data-msg="Hello Precy's Beauty Hub! I have a question.">Chat on WhatsApp</a>
+    <p style="font-size:.9rem;color:var(--deep)">Open daily · Delivery across Nigeria</p>
+  </div>
+</section>
+
+<footer>
+  © <span id="yr">2026</span> Precy's Beauty Hub. Handmade with love.
+</footer>
+
+<!-- Floating WhatsApp button -->
+<a href="#" class="float-wa wa-link" data-msg="Hello Precy's Beauty Hub! I'd like to place an order." aria-label="Order on WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2Zm5.8 14.17c-.25.7-1.43 1.34-1.97 1.39-.5.05-1.13.07-1.83-.12a16.6 16.6 0 0 1-5.3-3.14c-1.5-1.4-2.5-3.12-2.79-3.66-.29-.54-.03-1.1.4-1.58.43-.48.56-.58.84-.58h.42c.2 0 .4.01.55.46.2.5.63 1.74.69 1.87.06.13.1.28.01.44-.09.17-.13.27-.26.42l-.4.45c-.13.13-.27.27-.12.53.15.26.67 1.1 1.44 1.78.99.88 1.83 1.15 2.09 1.28.26.13.41.11.57-.07.15-.18.66-.77.84-1.03.18-.26.35-.22.58-.13.23.09 1.5.71 1.76.84.26.13.43.19.49.3.06.1.06.62-.19 1.32Z"/></svg>
+</a>
+
+<script>
+  // Your WhatsApp number: country code + number, no "+" or spaces.
+  // 0811 330 6750 becomes 2348113306750
+  var WHATSAPP_NUMBER = "2348113306750";
+
+  document.querySelectorAll(".wa-link").forEach(function(link){
+    var msg = link.getAttribute("data-msg") || "Hello! I'd like to place an order.";
+    link.href = "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(msg);
+    link.target = "_blank";
+    link.rel = "noopener";
+  });
+  document.getElementById("yr").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
